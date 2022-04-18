@@ -21,7 +21,7 @@ const Auth = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const { username, password, phoneNumber, avatarURL } = form;
+       
 
        
       
