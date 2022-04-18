@@ -1,24 +1,25 @@
 import React from 'react';
-import {Cta,Brand,Navbar} from "./components";
-import {Blog,Features,WhatGPT3,Header,Footer,Possibility} from "./containers"
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import "./App.css";
+
+import Analyze from './com/Analyze/Analyze';
+
+import Auth from './com/Auth';
+import Navbar from './com/navbar/Navbar';
 const App = () => {
     return (
-        <div className="App">
-            <div className="gradient__bg">
-                <Navbar/>
-                <Header/>
-                 </div>
-            <Brand/>
-            <WhatGPT3/>
-            <Features/>
-            <Possibility/>
-            <Cta/>
-            <Blog/>
-            <Footer/>
-
-        </div>
+        <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Analyze} />
+      
+          <Route path="/auth" exact component={Auth} />
+        </Switch>
+      </div>
+    </BrowserRouter>
     )
+
 }
 
 export default App
