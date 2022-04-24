@@ -12,9 +12,9 @@ const App = () => {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route path="/" exact component={Analyze} />
+          
       
-          <Route path="/auth" exact component={Auth} />
+          <Route path="/" exact component={Auth} />
         </Switch>
       </div>
     </BrowserRouter>
