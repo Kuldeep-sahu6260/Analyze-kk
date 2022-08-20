@@ -2,12 +2,8 @@ import React,{useState,useEffect} from 'react';
 import "./App.css";
 import "./owl.carousel.min.css";
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-import img1 from "./images/undraw_youtube_tutorial.svg";
-import img_1 from "./images/img_1.jpg";
-import img_2 from "./images/img_2.jpg";
-import img_3 from "./images/img_3.jpg";
-import img_4 from "./images/img_4.jpg";
-import img_5 from "./images/img_5.jpg";
+
+
 import img2 from "./images/person_transparent.png";
 import img3 from "./images/blob_1.svg";
 import img4 from "./images/blob_2.svg";
@@ -16,8 +12,10 @@ import background1 from "./images/hero_1.jpg";
 import person3 from "./images/person_3.jpg";
 import person2 from "./images/person_2.jpg";
 import person1 from "./images/person_1.jpg";
-import img6 from "./images/undraw_teacher.svg";
-import img7 from "./images/undraw_teaching.svg";
+
+import Auth from './components/Auth';
+import Course from './components/Course';
+import Programm from './components/Programm';
 
 const App = () => {
 
@@ -38,7 +36,7 @@ const App = () => {
   return () => {
     window.removeEventListener('scroll', handleScroll)
   }
-}, [])
+}, []);
 
 
 
@@ -123,25 +121,8 @@ const App = () => {
               <p data-aos="fade-up" data-aos-delay="300"><a href="#" className="btn btn-primary py-3 px-5 btn-pill">Admission Now</a></p>
 
             </div>
-
-            <div className="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
-              <form action="" method="post" className="form-box">
-                <h3 className="h4 text-black mb-4">Sign Up</h3>
-                <div className="form-group">
-                  <input type="text" className="form-control" placeholder="Email Addresss"/>
-                </div>
-                <div className="form-group">
-                  <input type="password" className="form-control" placeholder="Password"/>
-                </div>
-                <div className="form-group mb-4">
-                  <input type="password" className="form-control" placeholder="Re-type Password"/>
-                </div>
-                <div className="form-group">
-                  <input type="submit" className="btn btn-primary btn-pill" value="Sign up"/>
-                </div>
-              </form>
-
-            </div>
+{/* auth area */}
+           <Auth/>
           </div>
         </div>
         
@@ -151,207 +132,10 @@ const App = () => {
 </div>
 
 
-<div className="site-section courses-title" id="courses-section">
-  <div className="container">
-    <div className="row mb-5 justify-content-center">
-      <div className="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
-        <h2 className="section-title">Courses</h2>
-      </div>
-    </div>
-  </div>
-</div>
-<div className="site-section courses-entry-wrap"  data-aos="fade-up" data-aos-delay="100">
-  <div className="container">
-    <div className="row">
-
-      <div className="owl-carousel col-12 nonloop-block-14">
-
-        <div className="course bg-white h-100 align-self-stretch">
-          <figure className="m-0">
-            <a href="course-single.html"><img src={img_1} alt="d" className="img-fluid"/></a>
-          </figure>
-          <div className="course-inner-text py-4 px-4">
-            <span className="course-price">$20</span>
-            <div className="meta"><span className="icon-clock-o"></span>4 Lessons / 12 week</div>
-            <h3><a href="#">Study Law of Physics</a></h3>
-            <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-          </div>
-          <div className="d-flex border-top stats">
-            <div className="py-3 px-4"><span className="icon-users"></span> 2,193 students</div>
-            <div className="py-3 px-4 w-25 ml-auto border-left"><span className="icon-chat"></span> 2</div>
-          </div>
-        </div>
-
-        <div className="course bg-white h-100 align-self-stretch">
-          <figure className="m-0">
-            <a href="course-single.html"><img src={img_2} alt="Image" className="img-fluid"/></a>
-          </figure>
-          <div className="course-inner-text py-4 px-4">
-            <span className="course-price">$99</span>
-            <div className="meta"><span className="icon-clock-o"></span>4 Lessons / 12 week</div>
-            <h3><a href="#">Logo Design Course</a></h3>
-            <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-          </div>
-          <div className="d-flex border-top stats">
-            <div className="py-3 px-4"><span className="icon-users"></span> 2,193 students</div>
-            <div className="py-3 px-4 w-25 ml-auto border-left"><span className="icon-chat"></span> 2</div>
-          </div>
-        </div>
-
-        <div className="course bg-white h-100 align-self-stretch">
-          <figure className="m-0">
-            <a href="course-single.html"><img src={img_3} alt="Image" className="img-fluid"/></a>
-          </figure>
-          <div className="course-inner-text py-4 px-4">
-            <span className="course-price">$99</span>
-            <div className="meta"><span className="icon-clock-o"></span>4 Lessons / 12 week</div>
-            <h3><a href="#">JS Programming Language</a></h3>
-            <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-          </div>
-          <div className="d-flex border-top stats">
-            <div className="py-3 px-4"><span className="icon-users"></span> 2,193 students</div>
-            <div className="py-3 px-4 w-25 ml-auto border-left"><span className="icon-chat"></span> 2</div>
-          </div>
-        </div>
+<Course/>
 
 
-
-        <div className="course bg-white h-100 align-self-stretch">
-          <figure className="m-0">
-            <a href="course-single.html"><img src={img_4} alt="Image" className="img-fluid"/></a>
-          </figure>
-          <div className="course-inner-text py-4 px-4">
-            <span className="course-price">$20</span>
-            <div className="meta"><span className="icon-clock-o"></span>4 Lessons / 12 week</div>
-            <h3><a href="#">Study Law of Physics</a></h3>
-            <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-          </div>
-          <div className="d-flex border-top stats">
-            <div className="py-3 px-4"><span className="icon-users"></span> 2,193 students</div>
-            <div className="py-3 px-4 w-25 ml-auto border-left"><span className="icon-chat"></span> 2</div>
-          </div>
-        </div>
-
-        <div className="course bg-white h-100 align-self-stretch">
-          <figure className="m-0">
-            <a href="course-single.html"><img src={img_5} alt="Image" className="img-fluid"/></a>
-          </figure>
-          <div className="course-inner-text py-4 px-4">
-            <span className="course-price">$99</span>
-            <div className="meta"><span className="icon-clock-o"></span>4 Lessons / 12 week</div>
-            <h3><a href="#">Logo Design Course</a></h3>
-            <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-          </div>
-          <div className="d-flex border-top stats">
-            <div className="py-3 px-4"><span className="icon-users"></span> 2,193 students</div>
-            <div className="py-3 px-4 w-25 ml-auto border-left"><span className="icon-chat"></span> 2</div>
-          </div>
-        </div>
-
-        <div className="course bg-white h-100 align-self-stretch">
-          <figure className="m-0">
-            <a href="course-single.html"><img src="images/img_6.jpg" alt="Image" className="img-fluid"/></a>
-          </figure>
-          <div className="course-inner-text py-4 px-4">
-            <span className="course-price">$99</span>
-            <div className="meta"><span className="icon-clock-o"></span>4 Lessons / 12 week</div>
-            <h3><a href="#">JS Programming Language</a></h3>
-            <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-          </div>
-          <div className="d-flex border-top stats">
-            <div className="py-3 px-4"><span className="icon-users"></span> 2,193 students</div>
-            <div className="py-3 px-4 w-25 ml-auto border-left"><span className="icon-chat"></span> 2</div>
-          </div>
-        </div>
-
-      </div>
-
-     
-
-    </div>
-    <div className="row justify-content-center">
-      <div className="col-7 text-center">
-        <button className="customPrevBtn btn btn-primary m-1">Prev</button>
-        <button className="customNextBtn btn btn-primary m-1">Next</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div className="site-section" id="programs-section">
-  <div className="container">
-    <div className="row mb-5 justify-content-center">
-      <div className="col-lg-7 text-center"  data-aos="fade-up" data-aos-delay="">
-        <h2 className="section-title">Our Programs</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p>
-      </div>
-    </div>
-    <div className="row mb-5 align-items-center">
-      <div className="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-<img src={img1} alt="" className="img-fluid"/>
-      </div>
-      <div className="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-        <h2 className="text-black mb-4">We Are Excellent In Education</h2>
-        <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
-
-        <div className="d-flex align-items-center custom-icon-wrap mb-3">
-          <span className="custom-icon-inner mr-3"><span className="icon icon-graduation-cap"></span></span>
-          <div><h3 className="m-0">22,931 Yearly Graduates</h3></div>
-        </div>
-
-        <div className="d-flex align-items-center custom-icon-wrap">
-          <span className="custom-icon-inner mr-3"><span className="icon icon-university"></span></span>
-          <div><h3 className="m-0">150 Universities Worldwide</h3></div>
-        </div>
-
-      </div>
-    </div>
-
-    <div className="row mb-5 align-items-center">
-      <div className="col-lg-7 mb-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
-        <img src={img7} alt="Image" className="img-fluid"/>
-      </div>
-      <div className="col-lg-4 mr-auto order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-        <h2 className="text-black mb-4">Strive for Excellent</h2>
-        <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
-
-        <div className="d-flex align-items-center custom-icon-wrap mb-3">
-          <span className="custom-icon-inner mr-3"><span className="icon icon-graduation-cap"></span></span>
-          <div><h3 className="m-0">22,931 Yearly Graduates</h3></div>
-        </div>
-
-        <div className="d-flex align-items-center custom-icon-wrap">
-          <span className="custom-icon-inner mr-3"><span className="icon icon-university"></span></span>
-          <div><h3 className="m-0">150 Universities Worldwide</h3></div>
-        </div>
-
-      </div>
-    </div>
-
-    <div className="row mb-5 align-items-center">
-      <div className="col-lg-7 mb-5" data-aos="fade-up" data-aos-delay="100">
-        <img src={img6} alt="Image" className="img-fluid"/>
-      </div>
-      <div className="col-lg-4 ml-auto" data-aos="fade-up" data-aos-delay="200">
-        <h2 className="text-black mb-4">Education is life</h2>
-        <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem maxime nam porro possimus fugiat quo molestiae illo.</p>
-
-        <div className="d-flex align-items-center custom-icon-wrap mb-3">
-          <span className="custom-icon-inner mr-3"><span className="icon icon-graduation-cap"></span></span>
-          <div><h3 className="m-0">22,931 Yearly Graduates</h3></div>
-        </div>
-
-        <div className="d-flex align-items-center custom-icon-wrap">
-          <span className="custom-icon-inner mr-3"><span className="icon icon-university"></span></span>
-          <div><h3 className="m-0">150 Universities Worldwide</h3></div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</div>
+<Programm/>
 
 <div className="site-section" id="teachers-section">
   <div className="container">
